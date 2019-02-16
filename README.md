@@ -31,6 +31,11 @@
 |---|---|
 |check_update|開発バージョンをチェックするかどうか|
 
+## 補足
+公式ディレクトリに登録する際はこのモジュールを使用してはいけません。  
+『外部サーバによるホスティング』はガイドラインで許可されていないためです。  
+[Detailed Plugin Guidelines](https://developer.wordpress.org/plugins/wordpress-org/detailed-plugin-guidelines/#3-a-stable-version-of-a-plugin-must-be-available-from-its-wordpress-plugin-directory-page)
+
 # Author
 
 [technote-space](https://github.com/technote-space)
