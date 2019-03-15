@@ -32,7 +32,7 @@ class Update_Check implements \WP_Framework_Core\Interfaces\Singleton, \WP_Frame
 		if ( ! empty( $update_info_file_url ) ) {
 			$key = $this->app->is_theme ? 'ThemeURI' : 'PluginURI';
 			$uri = $this->app->get_plugin_data( $key );
-			if ( ! empty( $uri ) && $this->app->utility->starts_with( $uri, 'https://wordpress.org' ) ) {
+			if ( ! empty( $uri ) && $this->app->string->starts_with( $uri, 'https://wordpress.org' ) ) {
 				$this->app->setting->edit_setting( 'check_update', 'default', false );
 			}
 
