@@ -2,7 +2,7 @@
 /**
  * WP_Framework_Update_Check Classes Models Update_Check
  *
- * @version 0.0.1
+ * @version 0.0.3
  * @author Technote
  * @copyright Technote All Rights Reserved
  * @license http://www.opensource.org/licenses/gpl-2.0.php GNU General Public License, version 2
