@@ -15,7 +15,6 @@
 ``` composer require wp-content-framework/update_check ```  
 
 ## 依存モジュール
-* [core](https://github.com/wp-content-framework/core)
 * [yahnis-elsts/plugin-update-checker](https://github.com/YahnisElsts/plugin-update-checker)
 
 ## 基本設定
