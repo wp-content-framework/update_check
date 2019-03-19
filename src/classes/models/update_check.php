@@ -30,8 +30,7 @@ class Update_Check implements \WP_Framework_Core\Interfaces\Singleton, \WP_Frame
 	private function setup_update() {
 		$update_info_file_url = $this->app->get_config( 'config', 'update_info_file_url' );
 		if ( ! empty( $update_info_file_url ) ) {
-			$key = $this->app->is_theme ? 'ThemeURI' : 'PluginURI';
-			$uri = $this->app->get_plugin_data( $key );
+			$uri = $this->app->get_plugin_uri();
 			if ( ! empty( $uri ) && $this->app->string->starts_with( $uri, 'https://wordpress.org' ) ) {
 				$this->app->setting->edit_setting( 'check_update', 'default', false );
 			}
