@@ -11,6 +11,12 @@
 
 namespace WP_Framework_Update_Check\Classes\Models;
 
+use /** @noinspection PhpUndefinedClassInspection */
+	Puc_v4_Factory;
+use WP_Framework_Core\Traits\Hook;
+use WP_Framework_Core\Traits\Singleton;
+use WP_Framework_Update_Check\Traits\Package;
+
 if ( ! defined( 'WP_CONTENT_FRAMEWORK' ) ) {
 	exit;
 }
@@ -21,7 +27,7 @@ if ( ! defined( 'WP_CONTENT_FRAMEWORK' ) ) {
  */
 class Update_Check implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core\Interfaces\Hook {
 
-	use \WP_Framework_Core\Traits\Singleton, \WP_Framework_Core\Traits\Hook, \WP_Framework_Update_Check\Traits\Package;
+	use Singleton, Hook, Package;
 
 	/**
 	 * setup update
@@ -36,7 +42,8 @@ class Update_Check implements \WP_Framework_Core\Interfaces\Singleton, \WP_Frame
 			}
 
 			if ( $this->apply_filters( 'check_update' ) ) {
-				\Puc_v4_Factory::buildUpdateChecker(
+				/** @noinspection PhpUndefinedClassInspection */
+				Puc_v4_Factory::buildUpdateChecker(
 					$update_info_file_url,
 					$this->app->plugin_file,
 					$this->app->plugin_name
