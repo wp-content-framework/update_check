@@ -30,8 +30,9 @@ class Update_Check implements \WP_Framework_Core\Interfaces\Singleton, \WP_Frame
 
 	/**
 	 * setup update
+	 * @noinspection PhpUnusedPrivateMethodInspection
+	 * @SuppressWarnings(PHPMD.UnusedPrivateMethod)
 	 */
-	/** @noinspection PhpUnusedPrivateMethodInspection */
 	private function setup_update() {
 		$update_info_file_url = $this->app->get_config( 'config', 'update_info_file_url' );
 		if ( ! empty( $update_info_file_url ) ) {
