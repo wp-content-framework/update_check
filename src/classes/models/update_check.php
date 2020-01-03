@@ -2,7 +2,6 @@
 /**
  * WP_Framework_Update_Check Classes Models Update_Check
  *
- * @version 0.0.5
  * @author Technote
  * @copyright Technote All Rights Reserved
  * @license http://www.opensource.org/licenses/gpl-2.0.php GNU General Public License, version 2
@@ -31,8 +30,9 @@ class Update_Check implements \WP_Framework_Core\Interfaces\Singleton, \WP_Frame
 
 	/**
 	 * setup update
+	 * @noinspection PhpUnusedPrivateMethodInspection
+	 * @SuppressWarnings(PHPMD.UnusedPrivateMethod)
 	 */
-	/** @noinspection PhpUnusedPrivateMethodInspection */
 	private function setup_update() {
 		$update_info_file_url = $this->app->get_config( 'config', 'update_info_file_url' );
 		if ( ! empty( $update_info_file_url ) ) {
