@@ -16,7 +16,7 @@
   ],
   "require": {
     "php": ">=5.6.0",
-    "yahnis-elsts/plugin-update-checker": "^4.4"
+    "yahnis-elsts/plugin-update-checker": "^4.8"
   },
   "autoload": {},
   "license": "GPL-2.0+",
